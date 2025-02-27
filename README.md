@@ -6,15 +6,15 @@ Many veterinary clinics provide medical services but lack integrated foster care
 
 ## Objectives
 
-Provide efficient medical record management for pets.
+- **Provide efficient medical record management for pets.**
 
-Implement an online appointment booking system.
+- **Implement an online appointment booking system.**
 
-Develop a paid foster care system with secure payments.
+- **Develop a paid foster care system with secure payments.**
 
-Create an adoption platform to match pets with adoptive families.
+- **Create an adoption platform to match pets with adoptive families.**
 
-Ensure secure billing and client management for clinic operations.
+- **Ensure secure billing and client management for clinic operations.**
 
 ## Proposed Solution
 
