@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header-area {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-area .bottom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-area h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #ff9800;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+/* Admin Sections */
+.admin-section {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+.admin-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ff9800;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.admin-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.admin-section input,
+.admin-section textarea,
+.admin-section select,
+.admin-section button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.admin-section input:focus,
+.admin-section textarea:focus,
+.admin-section select:focus {
+    border-color: #ff9800;
+    outline: none;
+    box-shadow: 0 0 4px rgba(255, 152, 0, 0.4);
+}
+
+.admin-section button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-section button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+.admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-section table th,
+.admin-section table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-section table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.admin-section table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-section {
+        padding: 10px;
+    }
+
+    .header-area .bottom-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation a {
+        width: 100%;
+        text-align: center;
+    }
+}
