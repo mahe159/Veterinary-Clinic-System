@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="header-area">
+        <div class="bottom-header">
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#Dashboard">Dashboard</a></li>
+                    <li><a href="#Users">Users</a></li>
+                    <li><a href="#Settings">Settings</a></li>
+                    <li><a href="#Logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="admin-section">
+        <h1>Manage Users</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="viewer">Viewer</option>
+            </select>
+            
+            <button type="submit">Add User</button>
+        </form>
+    </section>
+
+    <section class="admin-section">
+        <h1>Users List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>Admin</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
