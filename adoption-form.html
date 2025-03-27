@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <header class="header-area">
+        <div class="bottom-header">
+            <div class="bottom-header-logo">
+                <h2><i class="fa-solid fa-paw"></i> Pawdopter Care</h2>
+            </div>
+            <div class="main-menu">
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="adoption-form">
+        <div class="container">
+            <h1>Adoption Form</h1>
+            <p>Fill out the form below to start your journey of adopting a pet.</p>
+            <form action="submit-adoption.php" method="POST">
+                <input type="hidden" name="pet_id" value="<?php echo htmlspecialchars($_GET['pet_id']); ?>">
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pawdopter Care. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

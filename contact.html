@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+       <!-- Header Section -->
+       <header class="header-area">
+        <div class="top-header">
+            <div class="top-header-left">
+                <div class="social-item">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="top-header-right">
+                <div class="contact-list">
+                    <ul>
+                        <li><a href="tel:+8801700826999">+880 1700 826999</a></li>
+                        <li><a href="#">Sunday to Thursday 10:00 AM - 7:00 PM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-header">
+            <div class="bottom-header-logo">
+                <h2><i class="fa-solid fa-paw"></i> Pawdopter Care</h2>
+            </div>
+            <div class="main-menu">
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="login.html">Admin Login</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <i class="fa-solid fa-bars"></i>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <div class="container">
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Pawdopter Care. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
