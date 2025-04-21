@@ -145,29 +145,6 @@ body {
     background-color: #f9f9f9;
 }
 
-.admin-section table a {
-    color: #007bff;
-    text-decoration: none;
-    margin-right: 5px;
-}
-
-.admin-section table a:hover {
-    text-decoration: underline;
-}
-
-.admin-section table button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.admin-section table button:hover {
-    background-color: #c82333;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .admin-section {
