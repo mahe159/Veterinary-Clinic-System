@@ -150,10 +150,21 @@ try {
             $stmt->execute([':appointment_id' => $appointment_id]);
             $success_message = "Pet care appointment rejected successfully!";
         }
+
+        if (isset($_POST['delete_message'])) {
+            // Delete contact message
+            $message_id = $_POST['message_id'];
+
+            $sql = "DELETE FROM contact_messages WHERE id = :message_id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([':message_id' => $message_id]);
+            $success_message = "Contact message deleted successfully!";
+        }
     }
 
-    // Fetch all necessary data
+    // Fetch all necessary data including contact messages
     $doctors = $pdo->query("SELECT * FROM doctors")->fetchAll(PDO::FETCH_ASSOC);
+    $contact_messages = $pdo->query("SELECT * FROM contact_messages ORDER BY created_at DESC")->fetchAll(PDO::FETCH_ASSOC);
     $adoption_requests = $pdo->query("SELECT ar.id, p.name AS pet_name, u.username, ar.status 
                                       FROM adoption_requests ar
                                       JOIN pets p ON ar.pet_id = p.id
@@ -374,6 +385,40 @@ try {
                                     <button type="submit" name="reject_petcare">Reject</button>
                                 </form>
                             <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Contact Messages -->
+    <div class="admin-section">
+        <h1>Contact Messages</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Received On</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($contact_messages as $message) : ?>
+                    <tr>
+                        <td><?php echo $message['id']; ?></td>
+                        <td><?php echo htmlspecialchars($message['name']); ?></td>
+                        <td><?php echo htmlspecialchars($message['email']); ?></td>
+                        <td><?php echo htmlspecialchars($message['message']); ?></td>
+                        <td><?php echo $message['created_at']; ?></td>
+                        <td>
+                            <form method="POST" action="">
+                                <input type="hidden" name="message_id" value="<?php echo $message['id']; ?>">
+                                <button type="submit" name="delete_message">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>
