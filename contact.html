@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,8 @@
     <!-- Contact Form Section -->
     <section class="contact-form">
         <div class="container">
-            <form action="submit_form.php" method="post">
+            <form action="contact.php" method="post">
+                <div id="status-message" style="margin-bottom: 20px;"></div>
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -80,5 +81,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Handle status messages
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+            const message = urlParams.get('message');
+            const statusDiv = document.getElementById('status-message');
+            
+            if (status === 'success') {
+                statusDiv.style.color = '#28a745';
+                statusDiv.innerHTML = 'Message sent successfully!';
+            } else if (status === 'error') {
+                statusDiv.style.color = '#dc3545';
+                statusDiv.innerHTML = message || 'An error occurred. Please try again.';
+            }
+        }
+    </script>
 </body>
 </html>
