@@ -1,0 +1,17 @@
+/* Logout Button Styles */
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4d4d; /* Red background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #e63939; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
